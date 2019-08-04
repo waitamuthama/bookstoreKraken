@@ -1,0 +1,10 @@
+
+{>"layouts/master" /}
+
+{<body}
+ <div class="row" style="text-align:center">
+   <div class="large-12 columns">
+     <h2>Hi? is Muthama</h2>
+   </div>
+ </div>
+{/body}

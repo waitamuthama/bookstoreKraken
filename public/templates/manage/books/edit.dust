@@ -1,0 +1,41 @@
+{>"layouts/manage" /}
+{<body}
+ <div class="row">
+     <div class="large-8 columns ">
+       <h2>Add Book</h2>
+       <form method="post" action="/manage/books/edit/{book.id}">
+             <label>Title
+               <input name="title" type="text" value="{book.title}" required="" />
+             </label>
+              <label>Author
+               <input name="author" type="text" value="{book.author}"  required=""/>
+             </label>
+              <label>Publisher
+               <input name="publisher" type="text" value="{book.publisher}" required="" />
+              </label>
+             <label>Price
+               <input name="price" type="text" value="{book.price}" required="" />
+             </label>
+             <label>Category
+               <select name="category">
+               {#categories}
+                 <option value="{.name}">{.name}</option>
+               {/categories}
+               </select>
+             </label>
+             <label>Description
+               <textarea name="description" >{book.description}</textarea>
+             </label>
+
+
+               <label>Cover URL
+                 <input name="cover" type="text" value="{book.cover}" required="" />
+
+
+             <input type="submit" class="button" value="Submit">
+
+         <input type="hidden" name="_csrf" value="{_csrf}">
+         </form>
+     </div>
+   </div>
+{/body}
